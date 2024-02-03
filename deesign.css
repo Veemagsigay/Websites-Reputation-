@@ -45,9 +45,8 @@
     letter-spacing: 2vw;
     text-shadow: 0 15px 25px rgb(0, 0, 0, 0.2);
     position: relative;
-    transform: translateY(100vh);
+    transform: translateY(100vh) scale(0);
     animation: popOut 3s forwards;
-
 }
 
 .text span a{
@@ -60,20 +59,23 @@
     border-radius: 50px;
     margin-top: 50px;
     letter-spacing: normal;
-    
-
+    position: relative;
+    transform: translateY(100vh) scale(0);
+    animation: popOut 3s forwards;
 }
 
     @keyframes popOut {
         0% {
+            opcaity: 0;
             transform: translateY(100vh) scale(0);
         }
         80% {
+            opacity: 1;
             transform: translateY(-20vh) scale(0);
         }
         100% {
+            opacity: 1;
             transform: translateY(0) scale(1);
-            transition: transform 0.5s ease-in-out;
         }
     }
 
@@ -87,6 +89,20 @@
 
 .text span:nth-child(3){
     animation-delay: 10s;
+}
+
+.about {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 0px;
+    overflow: hidden;
+}
+
+.about img {
+    width: 100%;
+    height: auto;
+    opacity: 9%;
 }
 
 
