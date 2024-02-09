@@ -23,68 +23,189 @@
     </selection>
 
 
-        <header class="menu">
-            <a href="#" class="logo">Reputation</a>
-            <nav class="clickable">
-                <b href="#">Home</b>
-                <b href="#">About</b>
-                <b href="#">History</b>
-                <b href="#">Music</b>
-            </nav>
-        </header>
-        </div>
+    <header class="menu">
+        <a href="#" class="logo">Reputation</a>
+        <nav class="clickable">
+            <b href="#">Home</b>
+            <b href="#">About</b>
+            <b href="#">History</b>
+            <b href="#">Music</b>
+        </nav>
+    </header>
 
-        <section class="about">
-            <div class="about-content">
-                <h1>TAYLOR ALISON SWIFT</h1>
-                <h3>American Singer-Songwriter</h3>
-                <p>Taylor Swift is a globally renowned singer-songwriter known for her captivating music across various
-                    genres, including country, pop, and alternative. Born on December 13, 1989, in Reading,
-                    Pennsylvania, Swift rose to fame with her self-titled debut album in 2006. Her emotionally resonant
-                    lyrics, catchy melodies, and relatable storytelling have garnered her numerous awards, including
-                    Grammys and Billboard Music Awards. Swift's evolution as an artist is marked by her ability to
-                    connect with audiences through her honest reflections on love, heartbreak, and personal growth.
-                    Beyond her music, she's recognized for her philanthropy, activism, and influence in popular culture
-                </p>
-                <div class="socials">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-tiktok'></i></a>
-                    <a href="#"><i class='bx bxl-youtube'></i></a>
+
+    <section class="about">
+        <div class="about-content">
+            <h1>TAYLOR ALISON SWIFT</h1>
+            <h3>American Singer-Songwriter</h3>
+            <p>Taylor Swift is a globally renowned singer-songwriter known for her captivating music across various
+                genres, including country, pop, and alternative. Born on December 13, 1989, in Reading,
+                Pennsylvania, Swift rose to fame with her self-titled debut album in 2006. Her emotionally resonant
+                lyrics, catchy melodies, and relatable storytelling have garnered her numerous awards, including
+                Grammys and Billboard Music Awards. Swift's evolution as an artist is marked by her ability to
+                connect with audiences through her honest reflections on love, heartbreak, and personal growth.
+                Beyond her music, she's recognized for her philanthropy, activism, and influence in popular culture
+            </p>
+            <div class="socials">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
+                <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="music">
+            <h2 class="title">Music Name</h2>
+            <div class="player">
+                <audio src=""></audio>
+                <div class="butns">
+                    <span class="prev"><i class='bx bx-skip-previous'></i>
+                    </span>
+                    <span class="playpause">
+                        <ion-icon name="play-outline"></ion-icon>
+                        <i class='bx bx-play'></i>
+                    </span>
+                    <span class="next"><i class='bx bx-skip-next'></i>
+                    </span>
                 </div>
             </div>
-        </section>
-       
-        <section>
-            <div class="musicpic">
-               
-                <img src="images/download.jpg" id="pic1" class="active">
-            <div class="pic">
-                
-            </div>  
+        </div>
 
-            <h2 id="musictitle">Ready for it</h2>
-            <h3 id="artist">Taylor Swfit</h3>
+        <script>
+            const title = document.querySelector('.title');
+            const prev = document.querySelector('.prev');
+            const playpause = document.querySelector('.playpause');
+            const next = document.querySelector('.next');
+            const audio = document.querySelector('audio');
+
+            // For Song List
+
+            let songlist = [
+                {
+                    name: 'Ready For It?',
+                    path: 'music/song1.mp3'
+                },
+                {
+                    name: 'End Game',
+                    path: 'music/song2.mp3'
+                },
+                {
+                    name: 'I Did Something Bad',
+                    path: 'music/song3.mp3'
+                },
+                {
+                    name: 'Don\'t Blame Me',
+                    path: 'music/song4.mp3'
+                },
+                {
+                    name: 'Delicate',
+                    path: 'music/song5.mp3'
+                },
+                {
+                    name: 'Look What You Made Me Do',
+                    path: 'music/song6.mp3'
+                },
+                {
+                    name: 'So It Goes...',
+                    path: 'music/song7.mp3'
+                },
+                {
+                    name: 'Gorgeous',
+                    path: 'music/song8.mp3'
+                },
+                {
+                    name: 'Getaway Car',
+                    path: 'music/song9.mp3'
+                },
+                {
+                    name: 'King of My Heart',
+                    path: 'music/song10.mp3'
+                }
+            ];
+
+            // play song
+            function playSong() {
+                songPlaying = true;
+                audio.play();
+                playpause.classList.add('active');
+                playpause.innerHTML = '<i class="bx bx-play"></i>';
+                title.textContent = songlist[currentSongIndex].name; // Update the title when a song is played
+            }
+
+            let songPlaying = false;
+            let currentSongIndex = 0;
+
+            // pause song
+            function pauseSong() {
+                songPlaying = false;
+                audio.pause();
+                playpause.classList.remove('active');
+                playpause.innerHTML = '<i class="bx bx-pause"></i>';
+                title.textContent = songlist[currentSongIndex].name;
+            }
+
+            // load song
+            function loadSong(song) {
+                audio.src = song.path;
+                audio.load();
+            }
+
+            // previous song
+            function prevSong() {
+                currentSongIndex--;
+                if (currentSongIndex < 0) {
+                    currentSongIndex = songlist.length - 1;
+                }
+                loadSong(songlist[currentSongIndex]);
+                playSong();
+            }
+
+            let i = 0; // Define i at the top of your script
+
+            // next song
+            function nextSong() {
+                currentSongIndex++;
+                if (currentSongIndex >= songlist.length) {
+                    currentSongIndex = 0; // Loop back to the first song if we've reached the end of the playlist
+                }
+                loadSong(songlist[currentSongIndex]);
+                playSong();
+            }
+
+            // Add event listeners for previous and next buttons
+            next.addEventListener('click', nextSong);
+            prev.addEventListener('click', prevSong);
+      
+            playpause.addEventListener('click', function () {
+                if (songPlaying) {
+                    pauseSong();
+                } else {
+                    playSong();
+                }
+            });
+
+            // load song on page load
+            loadSong(songlist[currentSongIndex]);
+
+
+            prev.addEventListener('click', prevSong);
+
         
-        <div class="playerque" id="playerprogress">
-            <div class="progress" id="progress">
-                
-                <div class="musictime">
-                   <span id="currenttime">0:00</span> 
-                   <span id="duration">0:00</span> 
-                </div> 
-            </div>
-        </div>
+            // Add event listeners for previous and next buttons
+            prev.addEventListener('click', prevSong);
+            next.addEventListener('click', nextSong);
 
-        <div class="musiccontrols">
-            <i class='bx bx-skip-previous' title="Previous" id="prev"></i>
-            <i class='bx bx-play' title="Play" id="play"></i>
-            <i class='bx bx-skip-next' title="Next" id="next" ></i>
-        </div>
-    </div>
-        </section>
-   
+            // load song on page load
+            loadSong(songlist[currentSongIndex]);
+
+
+        </script>
+
+    </section>
+
 </body>
 
 </html>
