@@ -5,6 +5,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    background-color: #3990a5;
+   
+}
+
 .styling{
     position: relative;
     height: 100vh;
@@ -102,9 +107,214 @@
 .about img {
     width: 100%;
     height: auto;
-    opacity: 9%;
+    opacity: 90%
+
 }
 
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 30px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.clickable b{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+
+}
+
+.clickable b:hover, .clickable b.active{
+    color: #f1c40f;
+}
+
+.about{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.about-content{
+    background-color: rgb(54, 52, 52);
+    width: 700px;
+    height: 500px;
+    position: relative;
+
+}
+
+.about-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.about-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: #686363;
+}
+
+.about-content p{
+    font-size: 24px;
+    margin: 20px 0;
+    display: block;
+}
+
+.socials{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    
+    
+}
+
+.socials a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #1e4967;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #1e4967;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.socials a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #731010;
+    z-index: -1;
+    transition: .5s;
+
+}
+
+.socials a:hover::before{
+    width: 100%;
+
+}
+
+.musicpic{
+    background-color: #fff;
+    width: 400px;
+    height: 500px;
+    border-radius: 2rem;
+    box-shadow:0px  15px 30px rgba(48, 50, 44, 0.3);
+
+
+}
+
+.musicpic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.pic{
+    object-fit: cover;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    box-shadow: 0px 30px 5px rgb(0, 0, 0, 0.5);
+}
+
+.pic.active{
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    
+}
+
+h2{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 500;
+    
+}
+
+h3{
+    font-size: 1.2rem;
+    text-align: center;
+    color:#686363
+}
+
+.playerque {
+    background-color: blue;
+    border-radius: 5px;
+    height: 6px;
+    width: 90%;
+    margin: 40px 20px 35px;
+    position: relative;
+    cursor: pointer;
+}
+
+.progress {
+    background-color: aquamarine;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: all 0.2s linear;
+
+}
+
+.musictime {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: -25px;
+}
+
+.musiccontrols {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.musiccontrols i.bx {
+    font-size: 30px;
+    color:#686363;
+    cursor: pointer;
+    margin-right: 30px;
+    user-select: none;
+    transition: all 0.3s ease-in;
+}
+
+.musiccontrols i.bx :hover {
+    filter: brightness(40%);
+    
+}
+
+.play {
+    font-size: 42px;
+}
 
 
 
