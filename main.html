@@ -6,6 +6,7 @@
     <title>Reputation Era</title>
     <link rel="stylesheet" href="deesign.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 
 </head>
 
@@ -21,6 +22,7 @@
             </div>
         </div>
     </selection>
+
 
 
     <header class="menu">
@@ -56,23 +58,27 @@
         </div>
     </section>
 
+
+
     <section>
         <div class="music">
-            <h2 class="title">Music Name</h2>
+            <div class="img">
+                <div class="songpic">
+                    <img src="images/download.jpg" alt="rep">
+                </div>
+                <h2 class="title"></h2>
+                <h3 class="artist">Taylor Swift</h3>
+            </div>
             <div class="player">
-                <audio src=""></audio>
+                <audio src="musics/"></audio>
                 <div class="butns">
-                    <span class="prev"><i class='bx bx-skip-previous'></i>
-                    </span>
-                    <span class="playpause">
-                        <ion-icon name="play-outline"></ion-icon>
-                        <i class='bx bx-play'></i>
-                    </span>
-                    <span class="next"><i class='bx bx-skip-next'></i>
-                    </span>
+                    <span class="prev"><i class='bx bx-skip-previous'></i></span>
+                    <span class="playpause"><ion-icon name="play-outline"></ion-icon><i class='bx bx-play'></i></span>
+                    <span class="next"><i class='bx bx-skip-next'></i></span>
                 </div>
             </div>
         </div>
+        
 
         <script>
             const title = document.querySelector('.title');
@@ -86,7 +92,7 @@
             let songlist = [
                 {
                     name: 'Ready For It?',
-                    path: 'music/song1.mp3'
+                    path: 'musics/Ready_For_It.mp3'
                 },
                 {
                     name: 'End Game',
@@ -178,7 +184,7 @@
             // Add event listeners for previous and next buttons
             next.addEventListener('click', nextSong);
             prev.addEventListener('click', prevSong);
-      
+
             playpause.addEventListener('click', function () {
                 if (songPlaying) {
                     pauseSong();
@@ -193,7 +199,7 @@
 
             prev.addEventListener('click', prevSong);
 
-        
+
             // Add event listeners for previous and next buttons
             prev.addEventListener('click', prevSong);
             next.addEventListener('click', nextSong);
@@ -203,8 +209,8 @@
 
 
         </script>
-
     </section>
+
 
 </body>
 
