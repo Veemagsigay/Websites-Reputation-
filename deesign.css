@@ -140,20 +140,18 @@ body{
     font-weight: 600;
 }
 
-
-.clickable a {
-    font-size: 15px;
+.clickable b{
+    font-size: 18px;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
-    display: inline-block; /* Ensure the link is displayed as a block element */
+
 }
 
-.clickable a:hover, .clickable a.active {
+.clickable b:hover, .clickable b.active{
     color: #f1c40f;
 }
-
 
 .about{
     height: 100vh;
@@ -235,7 +233,7 @@ body{
 .container {
     width: 90%;
     max-width: 1000px;
-    margin: 100px auto 200px; /* Adjust the bottom margin to add more space */
+    margin: 100px auto 150px; /* Adjust the bottom margin to add more space */
     padding: 20px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -250,13 +248,12 @@ body{
 
 .hd h1 {
     margin-bottom: 10px;
-    font-size: 50px;
     color: #ffffff;
 }
 
 .hd p {
     margin-bottom: 20px;
-    color: #504848;
+    color: #921e1e;
 }
 
 .content {
@@ -271,10 +268,10 @@ body{
 }
 
 .image img {
-    max-width: 500px;
-    margin-top: 1px;
+    max-width: 100%;
+    margin-top: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 5px rgba(6, 1, 1, 0.814);
+    box-shadow: 0 0 5px rgba(56, 54, 54, 0.814);
 }
 
 .bio {
@@ -299,7 +296,7 @@ th {
 }
 
 td {
-    color: #442f2f;
+    color: #f8e2e2;
 }
 
 
@@ -307,13 +304,7 @@ td {
     .container {
         width: 90%;
     }
-
-    .clickable {
-        display: none; /* Hide the menu on smaller screens */
-    }
 }
-
-
 
 .container {
     background-color: rgba(206, 195, 195, 0.786); /* Set the background color to white */
