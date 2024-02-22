@@ -111,9 +111,7 @@
     left: 0;
 }
 
-.container #next, #prev i {
-       box-shadow: #958383 0 0 10px;
-}
+
 
 .menu{
     position: fixed;
