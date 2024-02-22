@@ -3,13 +3,18 @@ body {
     background-color: #1A1A1A;
     color: #CCCCCC;
     margin: 0;
-    padding: 0;
+    padding: 15px 10px;
     transition: background-color 0.5s ease;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
+  
+
 }
+
+
 
 .menu{
     position: fixed;
@@ -55,6 +60,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    margin-top: 100px;
 }
 #image-container {
     flex: 1;
