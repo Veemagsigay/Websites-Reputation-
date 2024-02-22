@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #000,#fff);
+    text-align: center;
+}
+
+
+.album {
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.album h4{
+    color: #fff; 
+}
+
+.album img {
+    width: 200px;
+    height: auto;
+}
+
+.song-details {
+    display: none;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.chorus {
+    font-weight: bold;
+    color: #000;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 10px;
+    background-color: rgb(107, 98, 98);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    
+}
+
+
+.logo{
+    font-size: 30px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.clickable a {
+    font-size: 12px;
+    color: #242222;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    display: inline-block; 
+    padding-right: 45px;
+    
+}
+
+.clickable a:hover, .clickable a.active {
+    color: #fff3f3;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title h1 {
+    font-size: 50px;
+    color: #a49c9c;
+    font-weight: bold;
+    margin-top: 120px; 
+    margin-bottom: 20px; 
+}
+
+@media screen and (max-width: 991px) {
+
+    .menu {
+        padding: 0px 20px;
+    }
+    .clickable a {
+        font-size: 11px;
+        margin-left: 0px;
+    }
+    .logo{
+        font-size: 25px;
+    }
+
+    .title h1 {
+        font-size: 30px;
+    }
+
+}   
+
+@media screen and (max-width: 767px) {
+
+    .menu {
+        padding: 0px 20px;
+    }
+    .clickable a {
+        font-size: 9px;
+        padding-right: 35px;
+    }
+
+    .title h1 {
+        font-size: 20px;
+    }
+}
+
+   
+
+
+@media screen and (max-width: 479px) {
+
+    .clickable a {
+        font-size: 8px;
+        padding-right: 30px;
+        
+    }
+
+    .logo{
+        font-size: 20px;
+    }
+
+    .title h1 {
+        font-size: 18px;
+    }
+}

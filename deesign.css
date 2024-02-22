@@ -1,4 +1,4 @@
-*{
+* {
 
     margin: 0;
     padding: 0;
@@ -6,16 +6,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {}
 
-}
-
-.styling{
+.styling {
     position: relative;
     height: 100vh;
 }
 
-.styling video{
+.styling video {
     position: absolute;
     top: 0;
     left: 0;
@@ -26,23 +24,23 @@ body{
 }
 
 #bgvidz {
-    position: fixed; /* Position the video fixed to cover the entire viewport */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the video covers the entire viewport */
-    z-index: -1; /* Place the video behind other content */
+    object-fit: cover;
+    z-index: -1;
 }
 
-#bg-video{
+#bg-video {
     position: 200vw;
     height: 200vh;
     object-fit: cover;
     z-index: -1;
 }
 
-.text{
+.text {
     width: 90%;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -51,7 +49,7 @@ body{
     text-align: center;
 }
 
-.text span{
+.text span {
     display: inline-block;
     font-family: "Poppins", sans-serif;
     font-size: 10vw;
@@ -64,7 +62,7 @@ body{
     animation: popOut 3s forwards;
 }
 
-.text span a{
+.text span a {
     text-decoration: none;
     display: inline-block;
     color: #fff;
@@ -79,30 +77,88 @@ body{
     animation: popOut 3s forwards;
 }
 
-    @keyframes popOut {
-        0% {
-            opcaity: 0;
-            transform: translateY(100vh) scale(0);
-        }
-        80% {
-            opacity: 1;
-            transform: translateY(-20vh) scale(0);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 10px;
+    background-color: rgb(107, 98, 98);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    animation: popOut2 13.4s forwards;
+
+}
+
+
+.logo {
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.clickable a {
+    font-size: 12px;
+    color: #242222;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    display: inline-block;
+    padding-right: 45px;
+
+}
+
+.clickable a:hover,
+.clickable a.active {
+    color: #fff3f3;
+}
+
+@keyframes popOut {
+    0% {
+        opacity: 0;
+        transform: translateY(100vh) scale(0);
     }
 
-.text span:nth-child(1){
+    80% {
+        opacity: 1;
+        transform: translateY(-20vh) scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes popOut2 {
+    0% {
+        opacity: 0;
+        transform: translateY(100vh);
+    }
+
+    80% {
+        opacity: 0;
+        transform: translateY(-20vh);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text span:nth-child(1) {
     animation-delay: 10s;
 }
 
-.text span:nth-child(2){
+.text span:nth-child(2) {
     animation-delay: 10s;
 }
 
-.text span:nth-child(3){
+.text span:nth-child(3) {
     animation-delay: 10s;
 }
 
@@ -118,185 +174,6 @@ body{
     width: 100%;
     height: auto;
     opacity: 90%
-
-}
-
-.menu{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-.logo{
-    font-size: 30px;
-    color:#fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.clickable b{
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-
-}
-
-.clickable b:hover, .clickable b.active{
-    color: #f1c40f;
-}
-
-.about{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
-}
-
-.about-content{
-  
-    font-size: 20px; 
-    line-height: 1.6;
-
-}
-
-.about-content h1{
-    font-size: 56px;
-    font-weight: 700;
-    color: #fff;
-}
-
-.about-content h3{
-    font-size: 32px;
-    font-weight: 700;
-    color: #686363;
-}
-
-.about-content p{
-    font-size: 24px;
-    margin: 20px 0;
-    display: block;
-}
-
-.socials{
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-    
-    
-}
-
-.socials a{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #1e4967;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #1e4967;
-    text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.socials a::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: #222121;
-    z-index: -1;
-    transition: .5s;
-
-}
-
-.socials a:hover::before{
-    width: 100%;
-
-}
-
-
-
-.container {
-    width: 90%;
-    max-width: 1000px;
-    margin: 100px auto 150px; /* Adjust the bottom margin to add more space */
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #675e5e;
-    box-shadow: 0 0 100px rgba(255, 255, 255, 0.463);
-}
-
-.hd {
-    text-align: center;
-    padding: 15px 0;
-}
-
-.hd h1 {
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-.hd p {
-    margin-bottom: 20px;
-    color: #921e1e;
-}
-
-.content {
-    display: flex;
-    flex-direction: row-reverse; /* Reversed the flex direction to align items to the right */
-}
-
-.image {
-    flex: 1;
-    text-align: center;
-    margin-left: 20px; /* Added margin to create space between the image and table */
-}
-
-.image img {
-    max-width: 100%;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(56, 54, 54, 0.814);
-}
-
-.bio {
-    flex: 2;
-    padding-left: 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th,
-td {
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    font-weight: bold;
-}
-
-td {
-    color: #f8e2e2;
 }
 
 
@@ -307,8 +184,62 @@ td {
 }
 
 .container {
-    background-color: rgba(206, 195, 195, 0.786); /* Set the background color to white */
+    background-color: rgba(206, 195, 195, 0.786);
+}
+
+@media screen and (max-width: 991px) {
+
+    .menu {
+        padding: 0px 20px;
+    }
+
+    .clickable a {
+        font-size: 11px;
+        margin-left: 0px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .title h1 {
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .menu {
+        padding: 0px 20px;
+    }
+
+    .clickable a {
+        font-size: 9px;
+        padding-right: 35px;
+    }
+
+    .title h1 {
+        font-size: 20px;
+    }
 }
 
 
 
+
+@media screen and (max-width: 479px) {
+
+    .clickable a {
+        font-size: 8px;
+        padding-right: 30px;
+
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .title h1 {
+        font-size: 18px;
+    }
+}

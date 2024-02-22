@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1A1A1A;
+    color: #CCCCCC;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 10px;
+    background-color: rgb(107, 98, 98);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    
+}
+
+
+.logo{
+    font-size: 30px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.clickable a {
+    font-size: 12px;
+    color: #242222;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    display: inline-block; 
+    padding-right: 45px;
+    
+}
+
+.clickable a:hover, .clickable a.active {
+    color: #fff3f3;
+}
+
+#content {
+    display: flex;
+    max-width: 800px;
+    background-color: #333333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+#image-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; 
+}
+#text-container {
+    flex: 1;
+    padding: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #CCCCCC;
+    border: none; 
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #666666; 
+}
+th {
+    background-color: #555555;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+p {
+    transition: opacity 0.5s ease;
+}
+a {
+    color: #CCCCCC;
+    transition: color 0.5s ease;
+}
+a:hover {
+    color: #FFFFFF;
+}
+#content:hover {
+    background-color: #1D1D1D;
+}
+img:hover {
+    transform: scale(1.1);
+}
+p:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 991px) {
+
+    .menu {
+        padding: 0px 20px;
+    }
+    .clickable a {
+        font-size: 11px;
+        margin-left: 0px;
+    }
+    .logo{
+        font-size: 25px;
+    }
+
+    .title h1 {
+        font-size: 30px;
+    }
+
+}   
+
+@media screen and (max-width: 767px) {
+
+    .menu {
+        padding: 0px 20px;
+    }
+    .clickable a {
+        font-size: 9px;
+        padding-right: 35px;
+    }
+
+    .title h1 {
+        font-size: 20px;
+    }
+}
+
+   
+@media screen and (max-width: 479px) {
+
+    .clickable a {
+        font-size: 8px;
+        padding-right: 30px;
+        
+    }
+
+    .logo{
+        font-size: 20px;
+    }
+
+    .title h1 {
+        font-size: 18px;
+    }
+}
